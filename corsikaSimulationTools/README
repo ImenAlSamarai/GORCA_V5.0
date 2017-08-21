@@ -1,0 +1,21 @@
+This directory contains several simulation related tools:
+
+i)   corsikaIOreader: transform CORSIKA telescope files (eventio format) into grisu format 
+                      and/or fill root histograms with particle/Cherenkov photons properties
+		      (see README.corsikaIOreader)
+
+ii)  rosha:          read CORSIKA file and fill particles into root histograms
+                     (see README.rosha)
+
+iii) getThickness:   calculate atmospheric thickness [g/cm2] from given height [m]
+
+iv)  getHeight:      calculate height [m] from atmospheric thickness [g/cm2]
+
+v)   atmosphereAndCherenkovLight:   plot atmosphere and cherenkov properties from CORSIKA/KASCADE atmospheres
+
+vi)  atmosphereCherenkovAbsorption: plot atmospheric absorption of Cherenkov photons
+
+vii) getRunHeaderFromTelescopeFile: print run header from a CORSIKA telescope file
+
+All data files (atmosphere and extinction values are in ./data)
+

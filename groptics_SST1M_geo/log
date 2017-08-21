@@ -1,0 +1,39 @@
+============================================
+
+  -- grOptics main program: version 3.0
+       Mon Jul 31 13:29:45 2017
+
+============================================
+    -- command line entries; includes defaults
+         pilotfile     ./Config/opticsSimulation.pilot
+         inType/file   GRISU   
+         outType/file  ROOTLOC   
+     pilot structure after updating from command line entries
+    -- pilotPrint: defaults included 
+         pilot.pilotfile    ./Config/opticsSimulation.pilot
+         pilot.inType       GRISU
+         pilot.inFileName   ./Config/photon.cph
+         pilot.outType      ROOTLOC
+         pilot.outFileName  ./photonLocation.root
+         pilot.outFileHeaderTree allT
+         pilot.outFileTelTreeName T
+         pilot.outFileDCos  1
+         arrayConfigFile    ../groptics_cfg/SST-1M_single.array
+         logFileName        ./log
+         nShower / nPhoton  1 / 1
+         wobble x/y/r       0 0 0
+         latitude           -24.63
+         photonHistoryFile/Tree @outpath@/photonhistory.root / his
+         random number seed 0
+         vector capacities  100
+         telToDraw 2
+         telDrawOption 10
+         testTel   0
+         testTel base filename   
+         debugBranchesFlag       0
+
+         seed set by machineClock to 974889998
+
+============= finished read command line and pilot file
+
+GPilot::addPilotFile: not able to open pilot file: ../groptics_cfg/SST-1M_single.array

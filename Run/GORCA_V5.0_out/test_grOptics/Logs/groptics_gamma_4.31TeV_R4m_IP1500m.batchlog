@@ -1,0 +1,53 @@
+#-------------------------------------------
+#
+#            START (run 26)
+#
+#  grOptics on ialsamar@cta-76.eth.cta.camk.edu.pl
+#  time: Mon Jul 31 16:03:43 CEST 2017
+#
+#           job id: 1035194.ce.cta.camk.edu.pl
+#         job name: groptics_gamma_4.31TeV_R4m_IP1500m
+#      job logname: ialsamar
+#       ...@ queue: qshort
+#    CORSIKA input: /work/se3/alessio/CORSIKA/singleTel/gammas/alt2000m/gamma_4.31TeV_R4m_IP1500m.dat
+#
+#           ...cwd: '/home/ialsamar/GORCA_V5.0/groptics_SST1M_geo'
+#
+#-------------------------------------------
+
+
+ -- Local setting of the configuration:
+  - "/home/ialsamar/GORCA_V5.0/groptics_cfg/SST-1M.cfg" to "/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/groptics.cfg":
+      sed -e "s=@shadowing@=1=g;s=@outpath@=/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl=g;s=@gro_geometry@=/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/geometry.geo=g;s=@ntel@=1=g;/@telescope_array@/ {
+r /work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/telescopes.corsikaIO
+d
+};/@mirrors@/ {
+r /work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/telescopes.mirrors
+d
+}" "/home/ialsamar/GORCA_V5.0/groptics_cfg/SST-1M.cfg" > "/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/groptics.cfg"
+
+  - "/home/ialsamar/GORCA_V5.0/groptics_cfg/SST-1M.array" to "/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/groptics.array":
+      sed -e "s=@outpath@=/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl=g;s=@cfgarray@=/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/groptics.array=g;s=@cfg@=/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/groptics.cfg=g;/@arraytels@/ {
+r /work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/telescopes.arraytel
+d
+}" "/home/ialsamar/GORCA_V5.0/groptics_cfg/SST-1M.array" > "/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/groptics.array"
+
+  - "/home/ialsamar/GORCA_V5.0/groptics_cfg/SST-1M.pilot" to "/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/groptics.pilot":
+      sed -e "s=@outpath@=/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl=g;s=@cfgarray@=/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/groptics.array=g;s=@seed@=27=g" "/home/ialsamar/GORCA_V5.0/groptics_cfg/SST-1M.pilot" > "/work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/groptics.pilot"
+
+ -- Running:
+  ../corsikaSimulationTools/corsikaIOreader -queff 1 -cors /work/se3/alessio/CORSIKA/singleTel/gammas/alt2000m/gamma_4.31TeV_R4m_IP1500m.dat -seed 27 -grisu stdout -cfg /work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/telescopes.corsikaIO | ./grOptics -p /work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/cfg/groptics.pilot &> /work/se3/imen/GORCA_V5.0_tmp/test_grOptics_1035194.ce.cta.camk.edu.pl/log
+
+
+ *** BAD EXECUTION: something went wrong with corsikaIOreader ***
+      (all in "/work/se3/imen/GORCA_V5.0_out/test_grOptics/corsikaIOreader/Bads/gamma_4.31TeV_R4m_IP1500m"... check the log!)
+
+#-------------------------------------------
+#
+#            END (run 26)
+#
+#  grOptics on ialsamar@cta-76.eth.cta.camk.edu.pl
+#  time: Mon Jul 31 16:03:44 CEST 2017
+#
+#-------------------------------------------
+

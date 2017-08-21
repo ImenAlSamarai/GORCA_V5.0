@@ -1,0 +1,11 @@
+Changelog for corsika simulation tools (developed for VTS simulations)
+======================================================================
+(log started only in August 2013)
+
+2014/10/18      GM    v.1.41    minor fix to write out first interaction height correctly
+
+2013/10/18	HF    v.1.40	added support for reading in extinction information in another format.
+			        added smoother veritas atmospheres (61, 62) and extinction files.
+
+2013/08/15  (HF&GM)   v.1.30    increased precision of photon angles
+                                (produced features on the camera)
