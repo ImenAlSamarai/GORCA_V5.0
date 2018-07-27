@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # MAIN
-export main_dir="/home/ialsamar/GORCA_V5.0"
-export out_dir="/work/se3/imen/GORCA_V5.0_out"
-export tmp_dir="/work/se3/imen/GORCA_V5.0_tmp"
+export main_dir="/Users/ImenAlSamarai/GORCA_V5.0"
+export out_dir="/Users/ImenAlSamarai/GORCA_V5.0/output"
+export tmp_dir="/Users/ImenAlSamarai/GORCA_V5.0/tmp"
 #export corsika_version="6990"
 
 # execution dirs
 export runPath="${main_dir}/Run"
 #export corsikaPath="${simteldir}/corsika-${corsika_version}/run"
 export corsikaIOreaderPath="${main_dir}/corsikaSimulationTools"
-export gropticsPath="${main_dir}/groptics_SST1M_geo"
+export gropticsPath="${main_dir}/GrOptics"
 export carePath="${main_dir}/CARE_SST1M"
 
 # configs
@@ -29,7 +29,7 @@ export vmem="6000mb" # max virtual memory available on ui.cta.camk.edu.pl server
 export walltime="168:00:00" # max walltime!
 
 # rc
-export ROOTSYS="/work/app/root_v5.34.36"
+export ROOTSYS="/Users/ImenAlSamarai/anaconda3/envs/p2r5_new"
 export PATHTOVBFLIBDIRECTORY=$carePath/VBF-0.3.4/lib
 export PATH="$PATHTOVBFLIBDIRECTORY/bin:$ROOTSYS/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/lib:$ROOTSYS/lib:/lib:/usr/lib64:/usr/lib:$LD_LIBRARY_PATH:$PATHTOVBFLIBDIRECTORY/lib"
